@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>KafkaFlow.Serializer.MessagePack</PackageId>
+		<Description>MessagePack implementation for KafkaFlow serializer middleware</Description>
+		<RootNamespace>KafkaFlow.Serializer</RootNamespace>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>JotaDobleEse</Authors>
+		<Company />
+		<Product>KafkaFlow.Serializer.MessagePack</Product>
+		<Copyright>Copyright (c) JotaDobleEse 2022</Copyright>
+		<PackageProjectUrl>https://github.com/JotaDobleEse/kafkaflow-messagepack-serializer</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/JotaDobleEse/kafkaflow-messagepack-serializer</RepositoryUrl>
+		<PackageTags>kafkaflow serializer messagepack</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="KafkaFlow.Abstractions" Version="2.2.13" />
+	  <PackageReference Include="MessagePack" Version="2.4.59" />
+	</ItemGroup>
+
+</Project>
