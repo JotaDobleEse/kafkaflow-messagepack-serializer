@@ -36,10 +36,6 @@ KafkaFlow MessagePack Serializer is an extension of [Kafka Flow](https://github.
 
 See [samples](https://github.com/JotaDobleEse/kafkaflow-messagepack-serializer/tree/main/samples/) for more details
 
-## Contributing
-
-Read the [Contributing guidelines](CONTRIBUTING.md)
-
 ## Maintainers
 
 -   [Jesús Ruiz](https://github.com/JotaDobleEse)
