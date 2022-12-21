@@ -1,0 +1,1 @@
+MessagePack implementation for KafkaFlow serializer middleware
