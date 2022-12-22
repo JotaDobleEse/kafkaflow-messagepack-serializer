@@ -1,6 +1,4 @@
 # KafkaFlow MessagePack Serializer
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2a86b45f0ec2487fb63dfd581071465a)](https://www.codacy.com/gh/Farfetch/kafkaflow-retry-extensions/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Farfetch/kafkaflow-retry-extensions&amp;utm_campaign=Badge_Grade)
-
 KafkaFlow MessagePack Serializer is an extension of [Kafka Flow](https://github.com/Farfetch/kafkaflow) that use [MessagePack-CSharp](https://github.com/neuecc/MessagePack-CSharp) library to optimize message sizes.
 
 ## Requirements
@@ -38,7 +36,7 @@ See [samples](https://github.com/JotaDobleEse/kafkaflow-messagepack-serializer/t
 
 ## Maintainers
 
--   [Jesús Ruiz](https://github.com/JotaDobleEse)
+-   [JesÃºs Ruiz](https://github.com/JotaDobleEse)
 
 
 ## License
