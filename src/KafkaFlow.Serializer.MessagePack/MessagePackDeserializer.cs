@@ -1,5 +1,6 @@
 ﻿namespace KafkaFlow.Serializer
 {
+    using System;
     using System.IO;
     using System.Threading.Tasks;
     using MessagePack;
@@ -8,7 +9,7 @@
     /// <summary>
     /// A message serializer using MessagePack library
     /// </summary>
-    public class MessagePackSerializer : ISerializer
+    public class MessagePackDeserializer : IDeserializer
     {
         private static readonly IFormatterResolver DefaultResolver = CompositeResolver.Create(
                                                                         NativeDateTimeResolver.Instance,
@@ -17,18 +18,18 @@
         private readonly MessagePackSerializerOptions options;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MessagePackSerializer"/> class.
+        /// Initializes a new instance of the <see cref="MessagePackDeserializer"/> class.
         /// </summary>
         /// <param name="options">MessagePack serializer options</param>
-        public MessagePackSerializer(MessagePackSerializerOptions options)
+        public MessagePackDeserializer(MessagePackSerializerOptions options)
         {
             this.options = options;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MessagePackSerializer"/> class.
+        /// Initializes a new instance of the <see cref="MessagePackDeserializer"/> class.
         /// </summary>
-        public MessagePackSerializer()
+        public MessagePackDeserializer()
             : this(MessagePackSerializerOptions
                                 .Standard
                                 .WithResolver(DefaultResolver)
@@ -37,7 +38,7 @@
         }
 
         /// <inheritdoc/>
-        public Task SerializeAsync(object message, Stream output, ISerializerContext context)
-            => MessagePack.MessagePackSerializer.SerializeAsync(message.GetType(), output, message, this.options);
+        public async Task<object> DeserializeAsync(Stream input, Type type, ISerializerContext context)
+            => await MessagePack.MessagePackSerializer.DeserializeAsync(type, input, this.options);
     }
 }

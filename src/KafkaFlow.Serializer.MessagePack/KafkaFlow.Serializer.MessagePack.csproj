@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="KafkaFlow.Abstractions" Version="2.2.13" />
+		<PackageReference Include="KafkaFlow.Abstractions" Version="3.0.1" />
 		<PackageReference Include="MessagePack" Version="2.4.59" />
 	</ItemGroup>
 
