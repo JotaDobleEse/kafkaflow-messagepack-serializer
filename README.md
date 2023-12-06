@@ -2,6 +2,7 @@
 KafkaFlow MessagePack Serializer is an extension of [Kafka Flow](https://github.com/Farfetch/kafkaflow) that use [MessagePack-CSharp](https://github.com/neuecc/MessagePack-CSharp) library to optimize message sizes.
 
 ## Requirements
+
 **.NET Core 2.1 and later**
 
 ## NuGet Package
@@ -10,11 +11,37 @@ KafkaFlow MessagePack Serializer is an extension of [Kafka Flow](https://github.
 |---------------------------------|----|
 |KafkaFlow.Serializer.MessagePack|[![Nuget Package](https://img.shields.io/nuget/v/KafkaFlow.Serializer.MessagePack.svg?logo=nuget)](https://www.nuget.org/packages/KafkaFlow.Serializer.MessagePack/) ![Nuget downloads](https://img.shields.io/nuget/dt/KafkaFlow.Serializer.MessagePack.svg)
 
-## Install via NuGet 
-    Install-Package KafkaFlow.Serializer.MessagePack
+## Install via NuGet
 
-## Usage 
-### For a specific message type
+```bash
+Install-Package KafkaFlow.Serializer.MessagePack
+```
+
+## Usage
+
+### Consumer
+
+#### Deserialize a specific message type
+
+```csharp
+.AddMiddlewares(
+    middlewares => middlewares // KafkaFlow middlewares
+    .AddSingleTypeDeserializer<SampleMessage, MessagePackDeserializer>()
+    )
+```
+
+#### Deserialize all message types
+
+```csharp
+.AddMiddlewares(
+    middlewares => middlewares // KafkaFlow middlewares
+    .AddDeserializer<MessagePackDeserializer>()
+    )
+```
+
+### Producer
+
+#### Serialize a specific message type
 
 ```csharp
 .AddMiddlewares(
@@ -23,7 +50,7 @@ KafkaFlow MessagePack Serializer is an extension of [Kafka Flow](https://github.
     )
 ```
 
-### For all message types
+#### Serialize all message types
 
 ```csharp
 .AddMiddlewares(
@@ -37,7 +64,6 @@ See [samples](https://github.com/JotaDobleEse/kafkaflow-messagepack-serializer/t
 ## Maintainers
 
 -   [Jesús Ruiz](https://github.com/JotaDobleEse)
-
 
 ## License
 

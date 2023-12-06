@@ -39,7 +39,7 @@
                                     .WithWorkersCount(1)
                                     .AddMiddlewares(
                                         m => m
-                                            .AddSingleTypeSerializer<SampleMessage, MessagePackSerializer>()
+                                            .AddSingleTypeDeserializer<SampleMessage, MessagePackDeserializer>()
                                             .Add<PrintConsoleMiddleware>()
                                     )
                             )
