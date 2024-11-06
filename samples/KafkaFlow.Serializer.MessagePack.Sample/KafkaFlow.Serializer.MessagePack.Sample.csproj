@@ -17,10 +17,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="KafkaFlow" Version="3.0.1" />
-        <PackageReference Include="KafkaFlow.LogHandler.Console" Version="3.0.1" />
-        <PackageReference Include="KafkaFlow.Microsoft.DependencyInjection" Version="3.0.1" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+        <PackageReference Include="KafkaFlow" Version="3.0.10" />
+        <PackageReference Include="KafkaFlow.LogHandler.Console" Version="3.0.10" />
+        <PackageReference Include="KafkaFlow.Microsoft.DependencyInjection" Version="3.0.10" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     </ItemGroup>
 

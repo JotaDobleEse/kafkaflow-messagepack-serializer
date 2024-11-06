@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
@@ -14,7 +14,7 @@
 		<RepositoryUrl>https://github.com/JotaDobleEse/kafkaflow-messagepack-serializer</RepositoryUrl>
 		<PackageTags>kafkaflow serializer messagepack</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<Version>3.0.0</Version>
+		<Version>3.0.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -25,8 +25,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="KafkaFlow.Abstractions" Version="3.0.1" />
-		<PackageReference Include="MessagePack" Version="2.4.59" />
+		<PackageReference Include="KafkaFlow.Abstractions" Version="3.0.10" />
+		<PackageReference Include="MessagePack" Version="2.5.187" />
 	</ItemGroup>
 
 </Project>
