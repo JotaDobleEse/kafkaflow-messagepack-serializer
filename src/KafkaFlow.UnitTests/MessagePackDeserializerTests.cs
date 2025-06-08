@@ -1,11 +1,11 @@
 namespace KafkaFlow.Serializer.MessagePack.UnitTests
 {
     using AutoFixture;
-    using FluentAssertions;
     using global::MessagePack;
     using global::MessagePack.Resolvers;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
+    using Shouldly;
     using System.IO;
     using System.Threading.Tasks;
 
@@ -38,8 +38,8 @@ namespace KafkaFlow.Serializer.MessagePack.UnitTests
             var result = await deserializer.DeserializeAsync(input, typeof(TestMessage), contextMock.Object);
 
             // Assert
-            result.Should().NotBeNull();
-            result.Should().BeOfType<TestMessage>();
+            result.ShouldNotBeNull();
+            result.ShouldBeOfType<TestMessage>();
         }
     }
 }

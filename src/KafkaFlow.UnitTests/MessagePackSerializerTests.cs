@@ -1,11 +1,11 @@
 namespace KafkaFlow.Serializer.MessagePack.UnitTests
 {
     using AutoFixture;
-    using FluentAssertions;
     using global::MessagePack;
     using global::MessagePack.Resolvers;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
+    using Shouldly;
     using System.IO;
     using System.Threading.Tasks;
 
@@ -36,8 +36,8 @@ namespace KafkaFlow.Serializer.MessagePack.UnitTests
             await serializer.SerializeAsync(message, output, contextMock.Object);
 
             // Assert
-            output.Length.Should().BeGreaterThan(0);
-            output.Position.Should().BeGreaterThan(0);
+            output.Length.ShouldBeGreaterThan(0);
+            output.Position.ShouldBeGreaterThan(0);
         }
     }
 }

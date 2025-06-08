@@ -3,7 +3,7 @@ using MessagePack;
 
 namespace KafkaFlow.Serializer.MessagePack.UnitTests
 {
-    [MessagePackObject]
+    [MessagePackObject(AllowPrivate = true)]
     internal class TestMessage
     {
         [Key(0)]
